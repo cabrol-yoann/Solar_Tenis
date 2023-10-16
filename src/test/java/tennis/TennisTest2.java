@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.params.provider.MethodSource;
 
-public class tennisTest2 {
+public class TennisTest2 {
 
     public static Stream<Object[]> getAllScores() {
         return Stream.of(new Object[][]{
