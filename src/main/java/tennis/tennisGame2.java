@@ -19,15 +19,34 @@ public class tennisGame2 implements TennisGame
         String score = "";
         setScore();
 
+
+
+        if (P1point == P2point && P1point < 4)
+        {
+            if (P1point==0)
+                P1res = "Love";
+            score = P1res +"-All";
+        }
+
         if (P1point > 0 && P2point==0)
         {
             P2res = "Love";
+            score = P1res + "-" + P2res;
         }
         if (P2point > 0 && P1point==0)
         {
             P1res = "Love";
+            score = P1res + "-" + P2res;
         }
-        score = P1res + "-" + P2res;
+
+        if (P1point>P2point && P1point < 4)
+        {
+            score = P1res + "-" + P2res;
+        }
+        if (P2point>P1point && P2point < 4)
+        {
+            score = P1res + "-" + P2res;
+        }
 
         if (P1point==P2point && P1point>=3)
             score = "Deuce";
@@ -80,6 +99,7 @@ public class tennisGame2 implements TennisGame
                 P1res="Forty";
                 break;
             default:
+                P1res="";
                 break;
         }
         switch (P2point) {
@@ -93,6 +113,7 @@ public class tennisGame2 implements TennisGame
                 P2res="Forty";
                 break;
             default:
+                P2res="";
                 break;
         }
     }
