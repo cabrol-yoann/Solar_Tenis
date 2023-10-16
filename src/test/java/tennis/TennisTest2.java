@@ -1,6 +1,5 @@
-package Tenis;
+package tennis;
 
-import Tenis.TennisGame2;
 import org.junit.jupiter.params.ParameterizedTest;
 
 import java.util.stream.Stream;
@@ -8,7 +7,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.params.provider.MethodSource;
 
-public class TennisTest2 {
+public class tennisTest2 {
 
     public static Stream<Object[]> getAllScores() {
         return Stream.of(new Object[][]{
@@ -52,7 +51,7 @@ public class TennisTest2 {
         });
     }
 
-    private static void checkAllScores(int player1Points, int player2Points, String expectedScore, TennisGame game) {
+    private static void checkAllScores(int player1Points, int player2Points, String expectedScore, tennisGame game) {
         int highestScore = Math.max(player1Points, player2Points);
         for (int i = 0; i < highestScore; i++) {
             if (i < player1Points)
@@ -67,7 +66,7 @@ public class TennisTest2 {
     @ParameterizedTest
     @MethodSource("getAllScores")
     public void checkAllScoresTennisGame2(int player1Points, int player2Points, String expectedScore) {
-        TennisGame2 game = new TennisGame2("player1", "player2");
+        tennisGame2 game = new tennisGame2("player1", "player2");
         checkAllScores(player1Points, player2Points, expectedScore, game);
     }
 

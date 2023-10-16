@@ -1,4 +1,4 @@
-package Tenis;
+package tennis;
 
 public class Main {
 

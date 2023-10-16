@@ -1,6 +1,6 @@
-package Tenis;
+package tennis;
 
-public interface TennisGame {
+public interface tennisGame {
     void wonPoint(String playerName);
     String getScore();
 }
