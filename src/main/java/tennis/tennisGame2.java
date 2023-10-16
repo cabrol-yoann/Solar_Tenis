@@ -1,6 +1,6 @@
 package tennis;
 
-public class tennisGame2 implements tennisGame
+public class tennisGame2 implements TennisGame
 {
     public int P1point = 0;
     public int P2point = 0;

@@ -51,7 +51,7 @@ public class TennisTest2 {
         });
     }
 
-    private static void checkAllScores(int player1Points, int player2Points, String expectedScore, tennisGame game) {
+    private static void checkAllScores(int player1Points, int player2Points, String expectedScore, TennisGame game) {
         int highestScore = Math.max(player1Points, player2Points);
         for (int i = 0; i < highestScore; i++) {
             if (i < player1Points)
